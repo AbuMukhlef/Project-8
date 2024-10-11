@@ -31,11 +31,11 @@ class PaymentCubit extends Cubit<PaymentState> {
       amount: totalPrice,
       description: 'Coffee Order',
       creditCard: CreditCardConfig(saveCard: false, manual: false),
-      // applePay: ApplePayConfig(
-      // merchantId: dotenv.env['MERCHANT_ID']!,
-      //   label: 'ABU_Mukhlef',
-      //   manual: false,
-      // ),
+      applePay: ApplePayConfig(
+      merchantId: dotenv.env['MERCHANT_ID']!,
+        label: 'ABU_Mukhlef',
+        manual: true,
+      ),
     );
 
     emitUpdate();
